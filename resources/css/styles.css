@@ -1,0 +1,252 @@
+
+/* =================================================================================================== */
+/* =================================== DEFAULT SETUP =============================== */
+/* =================================================================================================== */
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;  /* mặc định là 16px */
+    color: #5a5a5a;
+    background-color: #ffffff;
+    text-rendering: optimizeLegibility; /* hiện thị chữ lên website cách tốt nhất*/    
+}
+
+
+/*=======================================================*/
+/*==================== REUSABLE COMPOMENT ==================*/   /* CÁC THUỘC TÍNH CSS SỬ DỤNG LẠI VÀ SỬ DỤNG NHIỀU LẦN */
+/*=======================================================*/
+
+.btn{
+    text-decoration: none;                      /* xoá gạch chân link */
+    color: white;
+    background-color: #e67e22;
+    padding: 15px 30px;
+    border-radius: 20px ;
+    margin: 0 5px;
+    width: 190px;
+    display: inline-block;                      /* vì 2 bottom nằm trên 1 hàng và thuộc dạng inline nên phải thêm dòng nay mới chỉnh được width*/
+    text-align: center;                         /* căn giữa */
+    transition: all .3s;
+}
+
+.btn:hover,
+.btn:active{
+    background-color: #d35400;
+}
+
+.clearfix::after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+h1{
+    text-transform: uppercase;                  /*chuyển tất cả chữ sang chữ IN HOA*/
+    font-size: 300%; 
+    font-weight: 400;                           /* chỉnh độ mỏng dày */
+    word-spacing: 5px;                          /* khoảng cách giữa các chữ */
+    letter-spacing: 1px;                        /* khoảng cách giữa các từ */
+    color: white;
+    line-height: 135%;                          /* khoảng cách giữa các dòng */
+    margin-bottom: 50px;
+}
+
+/* nếu để ý ta sẽ thấy 2 cái đầu của thẻ h1 và h2 giống nhau nên ta củng có thể gộp 2 cái đó lại như sau
+h1,h2{
+    text-transfomr: uppercase;
+    letter-spacing: 1px;
+}
+ */
+
+h2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #e67e22;
+    font-size: 180%;
+    font-weight: 700;
+    text-align: center;
+
+}
+h2::after{
+    content: " ";                                       /* tạo đường kẻ */
+    display: block;
+    width: 150px;
+    height: 3px;
+    background-color: rgba(230, 126, 34,0.5);
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 40px;
+
+}
+.p-long{
+    text-align: center;
+    color: #265077;
+    font-size: 22px;
+    /* margin-top: 40px; */
+    margin-bottom: 40px;
+    width: 70%;
+    margin-left: 15%;
+    line-height: 140%;
+
+}
+
+section{
+    padding: 50px;
+}
+
+
+/* ====================================================================================================== */
+/* ===================================  HEADER ========================================================== */
+/* ====================================================================================================== */
+
+
+header{
+    background-image: linear-gradient(45deg,rgba(2,33,64,0.8) 55%,rgba(45,95,93,0.85)), url("../img/background4.jpeg");  /* deg: độ, rgba -> a: độ mờ */
+    background-size: cover;             /* để background bao trùm hết nội dung  */
+    background-position: center;        /* để căn giữa background */
+    height: 100vh;                      /* vh = view height, có nghĩa là cái background này chiếm toàn màn hình hiển thị*/
+    background-attachment: fixed;       /* khi cuộn chuột thì background sẽ nằm trôi theo*/
+
+}
+.logo{
+    width: 350px;
+    float: left;
+    margin-top: -50px;
+    margin-left: 30px;
+}  
+
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-right: 30px;
+   
+}
+.main-nav li a{
+    text-decoration: none; /* bỏ các gạch chân của link */
+    color: white;
+    font-size: 110%;
+    font-weight: 700;     /* độ dày của chữ*/
+    transition: border-bottom 0.5s ;            /* hiệu ứng xuất hiện của cái border bottom  */
+    padding: 3px 0 ;
+}
+
+.main-nav li a:hover,                           /* hiệu ứng khi di chuột vào n sẽ hiện dấu ngón tay và có hiệu ứng */
+.main-nav li a:active{
+    border-bottom: 2px solid #cccccc;
+
+}
+
+
+
+ 
+.heading-main-box{
+    position: absolute;
+    top: 50%;                                   /**/    
+    left: 50%;                                  /*kỹ thuật căn giữa*/
+    transform: translate(-45%,-55%); 
+    width:1140px;
+}
+
+/*========================================================*/
+/*================ ABOUT SECTION ===================*/
+/*========================================================*/
+
+.about-picture img{
+width: 90%;
+border-radius: 20px;
+border: 4px solid  #c2e1fd;
+box-shadow: 0px 5px 15px 5px #265077 ;              /* tạo bóng  */
+        /*   x . y .độ mờ. độ phóng rộng . màu */
+
+transition: all .6s;
+}
+
+.about-picture{
+    position: relative;
+}
+
+.picture-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #c2e1fd;
+    transform: translate(-60%,100%);
+    opacity: 0;
+    transition: all .6s;
+}
+
+.about-picture:hover img,
+.about-picture:active img{
+    filter: brightness(55%) blur(1.5px);      /* chỉnh độ sáng độ mờ */
+}
+
+.about-picture:hover .picture-title,
+.about-picture:active .picture-title{
+    transform: translate(-60%,-50%);
+    opacity: 1;
+}
+
+ section{
+     height: 85vh;
+ }
+ /*========================================================*/
+/*================ PRODUCT SECTION ===================*/
+/*========================================================*/
+
+.products-section{
+    background-color: #f4f4f4;
+}
+.products-box{
+    background-color: #eeffff;
+    width: 90%;
+    height: 350px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    margin-top: 50px;
+    box-shadow: 3px 5px 10px #e0e0e0;
+}
+
+h3{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #265077;
+    color: white;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    margin-bottom: 15px;
+    
+}
+.products-price{
+    color: #265077;
+    font-size: 250%;
+    font-weight: 300;
+    text-align: center;
+}
+.products-price span{
+    font-size: 80%;
+    font-weight: 250;
+}
+.products-box ul li{
+    margin-left: 20%;
+    list-style: none;               /* bỏ mấy cái tích fomr của ul li*/
+    
+}
