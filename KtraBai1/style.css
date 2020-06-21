@@ -1,0 +1,92 @@
+.cover {
+    border-collapse: collapse;
+    width: 75%;
+    margin-left: 200px;
+}
+
+.cover,
+tr,
+td {
+    border: 2px solid black;
+}
+
+.infor {
+    text-align: center;
+    background-color: rgba(223, 164, 205, 0.815);
+}
+
+.infor-box {
+    height: 100px;
+    padding-top: 0;
+    margin: 0;
+    width: 40%;
+}
+
+td>span {
+    color: rgb(34, 21, 211);
+    font-weight: bold;
+}
+
+.cover-date {
+    display: inline-block;
+    margin-left: 95px;
+}
+
+.infor-box1 {
+    height: 200px;
+    padding: 0;
+    margin: 0;
+    width: 40%;
+}
+
+.inside-infor {
+    margin-top: 10px;
+}
+
+.inside-infor-address {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.inside-infor>input {
+    float: right;
+    margin-right: 120px;
+}
+
+textarea {
+    vertical-align: sub;
+    margin-left: 120px;
+    width: fit-content;
+    height: 30px;
+}
+
+.options1 {
+    margin-left: 120px;
+}
+
+.options1,
+.options2 {
+    display: inline-block;
+}
+
+.sign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-infor {
+    padding: 0;
+}
+
+
+/* .show-infor {
+    padding-bottom: 200;
+} */
+
+ul>li {
+    padding: 0;
+    list-style: none;
+    padding: 0;
+    color: darkblue;
+}

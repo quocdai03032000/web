@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="name-of-form">
+        <h3>Hồ Sơ Đăng Ký</h3>
+    </div>
+    <div class="form">
+        <table class="cover">
+            <tr class="infor">
+                <td>
+                    <span>Thông tin đăng nhập</span>
+                </td>
+                <td>
+                    <span>Thông tin khách hàng</span>
+
+                </td>
+            </tr>
+            <tr>
+                <td class="infor-box">
+                    <div class="inside-infor">
+                        <label>Tên đăng nhập</label>
+                        <input id="user-name" type="text"></input>
+                    </div>
+                    <div class="inside-infor">
+                        <label>Mật khẩu</label>
+                        <input id="password" type="password"></input>
+                    </div>
+                    <div class="inside-infor">
+                        <label>Nhập lại mật khẩu</label>
+                        <input id="retype-password" type="password"></input>
+                    </div>
+                </td>
+                <td rowspan="3" id="show-infor">
+                    <div class="cover-infor">
+                        <ul>
+                            <li id="name-of-client"> </li>
+                            <li id="TDN"> </li>
+                            <li id="pass"> </li>
+                            <li id="Date-of-clients"> </li>
+                            <li id="sex"> </li>
+                            <li id="email-of-clients"> </li>
+                            <li id="address-of-clients"> </li>
+                            <li id="phoneNumber-of-clients"> </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="infor"><span>Thông tin cá nhân</span></td>
+            </tr>
+            <tr>
+                <td class="infor-box1">
+                    <div class="inside-infor">
+                        <label>Họ tên khách hàng</label>
+                        <input id="name" type="text"></input>
+                    </div>
+                    <div class="inside-infor">
+                        <label for="cars">Ngày sinh:</label>
+                        <div class="cover-date">
+                            <select id="dd">
+                        </select>
+                            <select id="mm" onchange="selectDate()">
+                        </select>
+                            <select id="yyyy" onchange="selectDate()">
+                        </select>
+                        </div>
+                    </div>
+                    <div class="inside-infor">
+                        <label>Email</label>
+                        <input id="email" type="text"></input>
+                        </d:iv>
+                        <div class="inside-infor">
+                            <div>
+                                <label>Giới tính</label>
+                                <div class="options1">
+                                    <input type="radio" name="sex" value="Nam" checked="checked" />Nam</div>
+                                <div class="options2">
+                                    <input type="radio" name="sex" value="Nu" /> Nữ</div>
+                            </div>
+                            <div class="inside-infor-address">
+                                <label>Địa chỉ</label>
+                                <textarea id="address" classtype="text"></textarea>
+                            </div>
+                            <div class="inside-infor">
+                                <label>Điện thoại</label>
+                                <input type="text" id="phoneNumber" name="phone" placeholder="+84" pattern="[0-9]{10}" required>
+                            </div>
+                            <div class="inside-infor">
+                                <div class="sign">
+                                    <button type="submit" onclick="getUserName();getPassWord();checkPassword();getName();getSex();getAddress();getEmail();getPhoneNumber();getDate()">Đăng ký</button>
+                                </div>
+                            </div>
+                </td>
+            </tr>
+        </table>
+        </div>
+        <script type="text/javascript" src="getdate.js"></script>
+        <script type="text/javascript" src="getTTKH.js"></script>
+</body>
+
+
+</html>
